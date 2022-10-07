@@ -1,19 +1,23 @@
-# Welcome to MkDocs
+# Welcome to Skycharge internal documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Assumptions
+- easy to write in, edit, focus on content
+- to use open standards like markdown and json, platform independent language
+- posibility to use various tools, frameworks to generate document from doc sources
+- searchable, easly render to static webpage, pdf
+- version control for colaboration and tracking mistakes and bugs
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Tools used for creating this document:
+- [MkDocs](https://www.mkdocs.org)
+- [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/)
+<!-- TODO add {:target="_blank"} -->
 
-## Project layout
+## Todo list
+- [ ] add step by step instruction to set the mkdosc + material up
+- [ ] test autodeployment to s3
+- [ ] copy some skycharge docs for reference
+- [X] test mermaid and others adds on
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
 
-## autodeployment test
+This page was last updated: *{{ git-revision-date-localized }}*
