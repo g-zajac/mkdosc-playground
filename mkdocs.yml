@@ -1,3 +1,104 @@
-site_name: My Docs
+site_name: Internal Documentation
+
+nav:
+  - Home: index.md
+  - Installation: page1-inst.md
+  - DP interface: dp-interface.md
+  - Updating Debian: debian-update.md
+  - Tests: tests.md
+
 theme:
+  # logo: assets/logo.png    
   name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        # icon: material/toggle-switch-off-outline 
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        # icon: material/toggle-switch
+        icon: material/brightness-4
+        name: Switch to light mode    
+      primary: teal
+      accent: lime    
+  # logo: PyTorch_logo_icon.svg
+  plugins:
+   - search
+   - git-revision-date-localized
+      # enable_creation_date: true
+      # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/available-variables/
+  features:
+    - header.autohide
+    - navigation.tracking
+    # - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+  icon:
+  repo: fontawesome/brands/git-alt 
+  admonition:
+    note: fontawesome/solid/note-sticky
+    abstract: fontawesome/solid/book
+    info: fontawesome/solid/circle-info
+    tip: fontawesome/solid/bullhorn
+    success: fontawesome/solid/check
+    question: fontawesome/solid/circle-question
+    warning: fontawesome/solid/triangle-exclamation
+    failure: fontawesome/solid/bomb
+    danger: fontawesome/solid/skull
+    bug: fontawesome/solid/robot
+    example: fontawesome/solid/flask
+    quote: fontawesome/solid/quote-left
+
+markdown_extensions:
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  # - https://unpkg.com/mermaid/dist/mermaid.min.js
+  # - js/timeago.min.js
+  # - js/timeago_mkdocs_material.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/g-zajac/mkdosc-playground.git
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     We use cookies to recognize your repeated visits and preferences, as well
+  #     as to measure the effectiveness of our documentation and whether users
+  #     find what they're searching for. With your consent, you're helping us to
+  #     make our documentation better.
+
+# repo_url: https://github.com/g-zajac/mkdosc-playground.git
+copyright: Copyright &copy; 2022 Skycharge
