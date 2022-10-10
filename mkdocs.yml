@@ -72,6 +72,7 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.mark
+  - pymdownx.critic
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
