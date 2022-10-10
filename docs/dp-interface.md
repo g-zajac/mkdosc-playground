@@ -2,8 +2,10 @@
 
 ## Additional components
 Components required for building the interface (Mouser codes):
-- Cable D-Sub kabel DB15M/F  CS-DSDMDB15MF-005 For droneport interface only female is neded (charger side)[^1].
-- Header for source board (2x22, 44pins): 7-534206-2 header & wire housing 2x22p
+
+* Cable D-Sub kabel DB15M/F  CS-DSDMDB15MF-005 For droneport interface only female is neded (charger side)[^1].
+* Header for source board (2x22, 44pins): 7-534206-2 header & wire housing 2x22p
+
 
 ## Add drone port config to the config file
 To enable Drone port the GPIO section needs to be added to the skycharge config file.
@@ -32,6 +34,11 @@ dp-is-ready-pin          = P8.14  # gpio26
 
 Detailed description of the config can be found [here](https://support.skycharge.de/docs/configuration-file). 
 
+Restart the skycharge deamon:
+```bash
+systemctl restart skycharged
+```
+
 To test the droneport config run:
 ```bash
 skycharge-cli show-droneport-state
@@ -40,7 +47,7 @@ skycharge-cli show-droneport-state
 ## Wireing the interface
 Charging system is wired with D-SUB 15 ==female== plug.
 
-![DSUB15 female connector](../assets/DSUB-15female.svg)
+![DSUB15 female connector](assets/DSUB-15female.svg)
 
 
 | Beaglebone interface  | Beaglebone gpio pin| Cable color [^1] | D-SUB pin    | D-SUB connector            |
