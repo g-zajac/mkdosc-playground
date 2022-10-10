@@ -6,6 +6,7 @@
 - the content is decoupled from code and can be used with various tools, frameworks to generate document
 - searchable, easly render to static webpage, pdf
 - version control for colaboration and tracking mistakes and bugs
+- staging with previewing before publishing
 
 
 ## Tools used for creating this document:
