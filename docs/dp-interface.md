@@ -28,18 +28,19 @@ dp-open-pin              = P8.11  # gpio45
 dp-close-pin             = P8.12  # gpio44
 dp-is-landing-err-pin    = P8.13  # gpio23
 dp-is-ready-pin          = P8.14  # gpio26
-````
+```
 
-Detailed description of the config can be found [here](https://support.skycharge.de/docs/configuration-file)
-To test run:
+Detailed description of the config can be found [here](https://support.skycharge.de/docs/configuration-file). 
+
+To test the droneport config run:
 ```bash
 skycharge-cli show-droneport-state
 ```
 
-## wireing the interface
-Charging system side provides D-SUB 15 female plug.
+## Wireing the interface
+Charging system is wired with D-SUB 15 ==female== plug.
 
-![Alt text](../assets/DSUB-15female.svg)
+![DSUB15 female connector](../assets/DSUB-15female.svg)
 
 
 | Beaglebone interface  | Beaglebone gpio pin| Cable color [^1] | D-SUB pin    | D-SUB connector            |
