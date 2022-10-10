@@ -55,4 +55,4 @@ Charging system is wired with D-SUB 15 ==female== plug.
 | dp-is-ready-pin | gpio26 | <span style="background-color: lightgreen">-----</span>  | pin 12 | Automa􏰀on in auto and ready (3.3v, status)  |
 
 
-[^1]: For cable CS-DSDMDB15MF-005 from Mouser, this is extension cable, cut in half female part used for interface, male part used for tester. For future orders female-female cable should be ordered.
+[^1]: Cable CS-DSDMDB15MF-005 from Mouser, this is extension cable, cut in half female part used for interface, male part used for tester. For future orders female-female cable should be ordered. Core colors refers to this cable.
