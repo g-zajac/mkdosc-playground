@@ -6,6 +6,7 @@
 - posibility to use various tools, frameworks to generate document from doc sources
 - searchable, easly render to static webpage, pdf
 - version control for colaboration and tracking mistakes and bugs
+- staging with previewing before publishing
 
 
 ## Tools used for creating this document:
