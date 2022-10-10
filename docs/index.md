@@ -3,7 +3,7 @@
 ## Assumptions
 - easy to write in, edit, focus on content
 - to use open standards like markdown and json, platform independent language
-- posibility to use various tools, frameworks to generate document from doc sources
+- the content is decoupled from code and can be used with various tools, frameworks to generate document
 - searchable, easly render to static webpage, pdf
 - version control for colaboration and tracking mistakes and bugs
 
