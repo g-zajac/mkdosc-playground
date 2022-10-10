@@ -3,14 +3,14 @@
 The Skycharge card image used to flash new Beaglebone is based on Debian 9 Stretch which has reached the end of life but it is still supported.
 More info about Debian verisions [here](https://wiki.debian.org/DebianReleases) 
 
-!!! Warning
+!!! Warning 
 
-This procedure was carried for Fortem in Septebmeber 2022. Works but it has not been fully tested.
+    This procedure was carried for Fortem in Septebmeber 2022. Works but it has not been fully tested.
 
 
 ## Prepare Beaglebone
 Flash brand new Beaglebone with Skycharge SD card as usual.
-Restart and log in and follow steps below.
+Restart and log in via ssh and follow steps below:
 
 ## Upgrading Linux v9 Stretch to Linux v10 Buster
 The upgrade is done via apt upgrade on existing and running system with preinstalled Skychage packages.
