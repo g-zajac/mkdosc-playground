@@ -10,7 +10,25 @@ flowchart LR
 A(content in markdown) --> B(MkDocs) --> C(static website)
 ```
 
-## Instalation
+## Instalation from scratch
+
+
+
+## Instalation from repository
+
+```bash
+git clone https://github.com/g-zajac/mkdosc-playground.git
+```
+
+run installation script (add it!)
+
+## Editing
+
+
+
+## Publishing
+
+
 
 
 ## Commands

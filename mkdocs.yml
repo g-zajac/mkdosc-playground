@@ -2,7 +2,7 @@ site_name: Internal Documentation
 
 nav:
   - Home: index.md
-  - Installation: page1-inst.md
+  - Installation: mkdocs-setup.md
   - DP interface: dp-interface.md
   - Updating Debian: debian-update.md
   - Tests: tests.md
