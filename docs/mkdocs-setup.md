@@ -23,7 +23,7 @@ git clone https://github.com/g-zajac/mkdosc-playground.git
 run installation script (add it!)
 
 ## Editing
-
+<--! add online editor: https://github.com/mundimark/awesome-markdown-editors -->
 
 
 ## Publishing
