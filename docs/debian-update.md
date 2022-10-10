@@ -4,7 +4,9 @@ The Skycharge card image used to flash new Beaglebone is based on Debian 9 Stret
 More info about Debian verisions [here](https://wiki.debian.org/DebianReleases) 
 
 !!! Warning
+
 This procedure was carried for Fortem in Septebmeber 2022. Works but it has not been fully tested.
+
 
 ## Prepare Beaglebone
 Flash brand new Beaglebone with Skycharge SD card as usual.
