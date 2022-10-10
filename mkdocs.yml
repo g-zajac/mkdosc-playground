@@ -1,14 +1,14 @@
 site_name: Internal Documentation
 
 nav:
-  - Home: index.md
+  - About: index.md
   - Installation: mkdocs-setup.md
   - DP interface: dp-interface.md
   - Updating Debian: debian-update.md
   - Tests: tests.md
 
 theme:
-  # logo: assets/logo.png    
+  logo: assets/logo.png    
   name: material
   features:
     - navigation.tabs
