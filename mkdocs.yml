@@ -2,7 +2,11 @@ site_name: Internal Documentation
 
 nav:
   - About: index.md
-  - Installation: mkdocs-setup.md
+  - Doc system: mkdocs-intro.md
+  - Preparing new charging system: newUnit.md
+  - Cloning SD card: cloneSD.md
+  - FlashingPLC: flashPLC.md
+  - Authenticating SDK: sdk-auth.md
   - DP interface: dp-interface.md
   - Updating Debian: debian-update.md
   - Tests: tests.md
@@ -17,6 +21,7 @@ theme:
     - header.autohide
     - navigation.tracking
     # - navigation.tabs
+    - content.code.annotate
   language: en
   palette:
     - scheme: default
@@ -73,6 +78,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           # format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
   - attr_list
   - pymdownx.emoji:
       # emoji_index: !!python/name:materialx.emoji.twemoji
