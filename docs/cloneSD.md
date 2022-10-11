@@ -41,7 +41,7 @@ if the size of image is now it can be applied
 dd if=/dev/rdisk2 | pv -s 16G | of=/Users/production/skycharge_sd_backup.img bs=16M
 ```
 expected oustcome:
-```bash
+```shel
 1.61GiB 0:12:19 [2.82MiB/s] [===>                 ] 10% ETA 1:50:25
 ```
 
