@@ -1,6 +1,8 @@
 # Test page
+Test page for testing, formating, tools, plugins etc.
 
 ## Flow charts
+Text based flow chart, more info [here](https://mermaid-js.github.io/mermaid/#/). En example below.
 
 ``` mermaid
 graph LR
@@ -10,7 +12,6 @@ graph LR
   D --> B;
   B ---->|No| E[Yay!];
 ```
-
 
 ## Notes test
 
@@ -31,3 +32,50 @@ graph LR
 ## Icons
 :fontawesome-regular-face-laugh-wink:
 :fontawesome-abstract:
+
+
+## Tabs
+Could be used for code snipets, code / expectd response
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+## hints
+
+```bash
+apt update # (1)
+```
+
+1. I'm a code annotation!
+
+
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
+
+## Last update info
+This page was last updated: *{{ git-revision-date-localized }}*
