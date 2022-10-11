@@ -1,6 +1,6 @@
 # Setting up S3 bucket for hosting the MkDocs documantation site.
 
-To create a public bucket to host the documents we use CloudFormation template.
+This document is about creating a public bucket to host the documents we use CloudFormation template.
 
 Deploy the cloud formation using aws cli.
 ```bash
