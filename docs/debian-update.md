@@ -1,32 +1,28 @@
 # Updateing Debian on Beaglebone
 
 The Skycharge card image used to flash new Beaglebone is based on Debian 9 Stretch which has reached the end of life but it is still supported.
-More info about Debian verisions [here](https://wiki.debian.org/DebianReleases) 
+More info about Debian verisions [here](https://wiki.debian.org/DebianReleases). The update procedure was carried for Fortem in Septebmeber 2022.
 
 !!! Warning 
 
-    This procedure was carried for Fortem in Septebmeber 2022. Works but it has not been fully tested.
+    Skycharge packeges work after the update but they have not been fully tested.
 
 
 ## Prepare Beaglebone
-Flash brand new Beaglebone with Skycharge SD card as usual.
-Restart and log in via ssh and follow steps below:
-
-## Upgrading Linux v9 Stretch to Linux v10 Buster
+Flash brand new Beaglebone with Skycharge SD card as per regular build.
+Restart and log in via ssh and follow steps below.
 The upgrade is done via apt upgrade on existing and running system with preinstalled Skychage packages.
 The upgrade steps:
 
+
+
 To check current linux version run:
 ```bash
-cat /etc/*release
-```
-optional:
-```bash
-lsb_release -a
-cat /etc/debian_version
+cat /etc/*release #(1)
 ```
 
-You should receive:
+1. The response should look as follows:
+```bash
 PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
 NAME="Debian GNU/Linux"
 VERSION_ID="9"
@@ -35,9 +31,16 @@ ID=debian
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
+```
+
+optional:
+```bash
+lsb_release -a
+cat /etc/debian_version
+```
 
 ## Preparing space on flash disk
-To run update some space on flash is needed.
+To run update some space on flash is needed for downloading new packages.
 To check available space on Beaglebone run
 ```bash
 df -h
@@ -133,17 +136,22 @@ apt upgrade --without-new-pkgs
 
 Once the update finishes you can check linux version:
 ```bash
-cat /etc/*release
+cat /etc/*release # (1)
 ```
-PRETTY_NAME="Debian GNU/Linux 10 (buster)"
-NAME="Debian GNU/Linux"
-VERSION_ID="10"
-VERSION="10 (buster)"
-VERSION_CODENAME=buster
-ID=debian
-HOME_URL="https://www.debian.org/"
-SUPPORT_URL="https://www.debian.org/support"
-BUG_REPORT_URL="https://bugs.debian.org/"
+
+1. Should receive:
+    ```bash
+    PRETTY_NAME="Debian GNU/Linux 10 (buster)"
+    NAME="Debian GNU/Linux"
+    VERSION_ID="10"
+    VERSION="10 (buster)"
+    VERSION_CODENAME=buster
+    ID=debian
+    HOME_URL="https://www.debian.org/"
+    SUPPORT_URL="https://www.debian.org/support"
+    BUG_REPORT_URL="https://bugs.debian.org/"
+    ```
+
 
 ```bash
 reboot
