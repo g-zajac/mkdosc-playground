@@ -1,5 +1,6 @@
 # Meanwell Power Supplies
-In addition to the adjustment via the built-in potentiometer, the output voltage can be trimmed to 40~110% (depending from the PS specification/model, check the table) of the nominal voltage by applying EXTERNAL VOLTAGE.
+To select the right power supply for an application please check the voltage and curent range in documentation. Skycharge System use programmable mode and the voltage and current range is different then in factory default mode when the programming is not activated.
+In the programming mode in addition to the adjustment via the built-in potentiometer, the output voltage can be trimmed to 40~110% (depending from the PS specification/model, check the table below) of the nominal voltage by applying EXTERNAL VOLTAGE.
 
 Adjustment of constant current level is allowable to:
 
@@ -32,7 +33,7 @@ The Meanwell (RSP-1600-48)
 | RSP-1600-36 |  40 - 125%   |       36V       |    14.4V    |      45V     |  44.5A  |
 | **RSP-1600-48** | **40 - 125%** | **48V** |  **19,2V**    |    **60V**   |  **33.5A** |
 
-Practicly we should use mainly RSP-1600-48 unless the battery specs need lower voltage then 19.2V as the hardware will not be able to handle more then 30A.
+Practicly we should use mainly RSP-1600-48 unless the battery specs need lower voltage then 19.2V. The hardware will not be able to handle more then 30A so the power of lower voltage models will not be utilized. 
 
 
 
