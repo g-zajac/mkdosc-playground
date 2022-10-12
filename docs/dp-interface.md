@@ -1,13 +1,13 @@
 # Charging System with Drone Port
 
-To prepare the charging system for a droneport, standard system (just a plate without box) is needed with additional cable interface which is connected to the drone port. 
+To prepare the charging system for a droneport, standard system (just a plate without box) is needed with additional interface cable, which is connects BB gpio pins with a Droneport. 
 
 Prcedure
 
 - order addtional components
 - cut dsub cable in half, strip wires, add heat shrink tube
-- solder wires to header according the table
-- optionally, activate remote access for test at CDM
+- solder wires to header according the table, [specification](assets/dp-interface-spec.pdf)
+- optionally, activate [SDK](sdk-auth.md) to remote access and test at CDM
 
 ## Additional components
 Components required for building the cable interface (Mouser codes):
@@ -15,12 +15,18 @@ Components required for building the cable interface (Mouser codes):
 * Cable D-Sub kabel DB15M/F  CS-DSDMDB15MF-005 For droneport interface only female is neded (charger side)[^1].
 * Header for source board (2x22, 44pins): 7-534206-2 header & wire housing 2x22p
 
-## Wireing the interface
-Charging system is wired with D-SUB 15 ==female== plug.
+## The interface
+<!-- Charging System is connected with a Droneport with a cable which connects BB pinheader with acording to the  -->
 
-![DSUB15 female connector](assets/DSUB-15female.svg)
+![DSUB15 female connector](assets/DSUB-15female.svg){ align=center }
+<!-- *D-Sub15 female connector - to the Droneport* -->
+the D-SUB 15 ==female== plug connects source board with the Droneport controller.
 
+![pin header on source board](assets/skymux-socket30.png){ align=center }
+<!-- *socket - to pinheader located next to BB on the source board* -->
+the 44pin socket is connected to pin header located next to BB on the source PCB.
 
+## Wireing table
 | Beaglebone interface  | Beaglebone gpio pin| Cable color [^1] | D-SUB pin    | D-SUB connector            |
 | --------------------- | ------------------ | ----------- | ----------- | --------------------------- |
 | dp-is-closed-pin      |    gpio66          | <span style="background-color: gray">-----</span> |pin 9        | Gate is close (3.3v, status)            |
@@ -31,6 +37,10 @@ Charging system is wired with D-SUB 15 ==female== plug.
 | dp-close-pin | gpio44 | <span style="background-color: orange">-----</span> | pin 4 | Close gate (3.3v, >=100mS)  |
 | dp-is-landing-err-pin | gpio23 |  | NC |   |
 | dp-is-ready-pin | gpio26 | <span style="background-color: lightgreen">-----</span>  | pin 12 | Automa􏰀on in auto and ready (3.3v, status)  |
+
+## Assembled cable
+
+![assembled interface cable](assets/dp-cable25.png)
 
 ## Add drone port config to the config file
 To enable Drone Port interface the GPIO section needs to be added to the skycharge config file.
