@@ -29,24 +29,36 @@ The content can be writen and edited in any text editor in markdown language. Wh
 <!-- TODO add git hooks, autobuild etc -->
 ``` mermaid
 flowchart LR
-A(content in markdown) --> B(MkDocs) --> C(static website)
+A(content in markdown) -->  B
+
+B(MkDocs) 
+
+B --> C(static website)
+
 ```
 
-Every time there is a push to master branch it triggers the build flow
+The proces is automated with a github.
+Every time there is a content pushed to master branch, it triggers the build flow and publish the static generated page.
+When pushinh on development branch development, i.e adding and working on text 2, there will be no triger and changes will be visible only locally without publishing. After merging, text 1 with additional text 2 will be published.
+
 ``` mermaid
 gitGraph
-       commit
-       commit
-       branch develop
-       checkout develop
-       commit
-       commit
+       commit id: "init"
+       commit id: "add text 1"
+       branch development
+       checkout development
+       commit id: "add new text 2"
        checkout main
-       merge develop
-       commit
-       commit
+       commit id: "change text 1"
+       checkout development
+       commit id: "update text 2"
+       checkout main
+       merge development id: "merge" tag: "text   2 added to text 1" type: NORMAL
+       commit id: "-"
+       commit id: " "
 ```
-the built documentation can ba also previed loccaly with
+
+the documentation can ba also preview live with ongoing changes locally with
 ```bash
 mkdocs serve
 ```
