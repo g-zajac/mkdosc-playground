@@ -24,7 +24,7 @@
 ## Introduction
 MkDocs is static site generator.
 
-The content can be writen and edited in any text editor in markdown language. When changes are pushed to repository, building action is automaticly triggered and the static website generated.
+The content can be writen in markdown language and edited in any text editor. When changes are pushed to repository, building action is automaticly triggered and the static website generated and published.
 
 <!-- TODO add git hooks, autobuild etc -->
 ``` mermaid
@@ -38,8 +38,8 @@ B --> C(static website)
 ```
 
 The proces is automated with a github.
-Every time there is a content pushed to master branch, it triggers the build flow and publish the static generated page.
-When pushinh on development branch development, i.e adding and working on text 2, there will be no triger and changes will be visible only locally without publishing. After merging, text 1 with additional text 2 will be published.
+Every time a content or changes are pushed to master branch, it triggers the build flow and publish the static generated page. 
+Changes on development branch, i.e adding and working on text 2, will not triger the build flow and changes will be visible only locally. After merging with master branch, text 1 with additional text 2 will be published.
 
 ``` mermaid
 gitGraph
