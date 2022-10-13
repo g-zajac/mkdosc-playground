@@ -6,7 +6,7 @@ Prcedure
 
 - order addtional components for building the cable.
 - cut dsub cable in half, strip wires, add heat shrink tube
-- solder wires to header according the table, [specification](assets/dp-signals.pdf)
+- solder wires to header according the table, based om [DP specification](assets/dp-signals.pdf)
 - optionally, activate [SDK](sdk-auth.md) to remote access and test at CDM
 
 ## Additional components
