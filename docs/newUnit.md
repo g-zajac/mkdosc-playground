@@ -19,7 +19,7 @@ Power the BB up, after a minute or so all blue LEDs on BB should start 'walking'
         Remeber to remove the SD card after flashing.
 
 ## First power up 
-Install the BB to the source board. 
+Install the BB on the source board. 
 Connect the source board to the 12V board PS and also the Meanwell PS - (essential for calibration process). Power up.
 Power up the BB, after a minute ish, once it is booted, acces the BB remotly via ssh [^1].
 
@@ -31,7 +31,7 @@ ssh -i <path to ssh keys> root@skydevice.local
 Flashed BB consists debian system with all skycharge deamons and packages pre-installed. On the source board there is STM microcontroller which need to be flashed with Skycharge firmware when it comes from PCB manufacture. 
 To do so, we can use preinstalled cli tool from BB and run:
 ```shel
-skymux-flash --hw-version <get the number written on the board, it should be 1.3, so specify 1.3.0>
+skymux-flash --hw-version <get the number written on the board i.e 1.3 at the moment, so specify 1.3.0>
 ```
 This will flash the STM microcontrller on the source board. The board may need power cycle (down and up) to be fully functional.
 
