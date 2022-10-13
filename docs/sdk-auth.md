@@ -7,16 +7,17 @@ from the Skycharge web cloud unfortunately).
 
 ## Procedure
 
-1) A customer has to create an account on the [Skycharge Cloud](https://cloud.skycharge.de) common procedure through the email/google acc/etc.
+1) A customer has to create an account on the [Skycharge Cloud](https://cloud.skycharge.de) with common procedure through the email/google acc/etc.
 
 2) Once a customer creates an account the Skycharge Cloud, admin requests from the customer 'user-uuid' (taken from the skycharge.conf or generated) and email i.e:
-- email: demo@demo.demo
-- user-uuid: 00000000-0000-0000-0000-000000000000
+   
+   - email: demo@demo.demo
+   - user-uuid: 00000000-0000-0000-0000-000000000000
 
-3) Connect to the skybroker host: ssh -i skycharge-amazon.pem admin@install.skycharge.de
+1) Connect to the skybroker host: ssh -i skycharge-amazon.pem admin@install.skycharge.de
 
-4) Start MongoDB client on the skybroker host:
-```bash
+2) Start MongoDB client on the skybroker host:
+```shel
 mongosh mongodb://172.31.45.75/skycharge_db
 ```
 
