@@ -4,6 +4,7 @@ nav:
   - About: index.md
   - Doc system: mkdocs-intro.md
   - Preparing new charging system: newUnit.md
+  - Beaglebone packages: bb-pkgs.md
   - Cloning SD card: cloneSD.md
   - FlashingPLC: flashPLC.md
   - Authenticating SDK: sdk-auth.md
