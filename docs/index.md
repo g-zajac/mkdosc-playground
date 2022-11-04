@@ -4,5 +4,10 @@ This page is about internal documentation where you can find clearly detailed pr
 The aim is to get all the knowledge together in one place.
 
 
+<!-- External
+The Skycharge Documentation Center is a perfect place to explore and delve deeper into the potential of our products on the autonomus charging. Herein lies a set of comprehensive documents that provides the fundamentals and the specifications of our devices. Information curated here by our experts will help you initiate and build your next charging project.
+
+ -->
+
 
 
