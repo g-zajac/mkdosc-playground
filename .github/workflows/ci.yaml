@@ -16,7 +16,7 @@ jobs:
       - name: build and copy docs
         uses: gameclosure/mkdocs-publish-s3-action@master
         env:
-          S3_PATH: "${AWS_S3_LOCATION}"
+          S3_PATH: ${{ secrets.AWS_S3_LOCATION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           CHANGELOG: false # generate a changelog file out of Github release notes
