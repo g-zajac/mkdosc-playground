@@ -24,7 +24,13 @@
 ## Introduction
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
 
-
+<!-- TODO update aws CodePipeline -->
+``` mermaid
+graph LR
+A(content in markdown) --- B
+B(MkDocs) 
+B --- C(static website)
+```
 
 
 ## Local installation
@@ -107,22 +113,20 @@ conda activate ./env
 
 More info how to getting started at [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
+## Commands on local machine with the MkDocs
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
+
 ## Publishing static webpage
-The document can be writen in markdown language and edited in any text editor. When changes are pushed to repository, building action is automaticly triggered and the static website generated and published.
+The documentation structure, files and media are stored on github and website building proces is automated with a github hooks.
+Every time a content or changes are pushed to master branch, static site building action is automaticly triggered on AWS CodePieline and the website is generated and uploaded to AWS S3. The S3 has public access blocked. The website can be accessed via CloudFront. Authorisation is done with Lambda function.
 
-<!-- TODO add git hooks, autobuild etc -->
-``` mermaid
-flowchart LR
-A(content in markdown) -->  B
+![an image](assets/aws-pipeline.png)
 
-B(MkDocs) 
-
-B --> C(static website)
-
-```
-
-The proces is automated with a github.
-Every time a content or changes are pushed to master branch, it triggers the build flow and publish the static generated page. 
+Tests, drafts etc can be edited in other branches i.e development.
 Changes on development branch, i.e adding and working on text 2, will not triger the build flow and changes will be visible only locally. After merging with master branch, text 1 with additional text 2 will be published.
 
 ``` mermaid
@@ -141,11 +145,3 @@ gitGraph
        commit id: "-"
        commit id: " "
 ```
-
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
