@@ -2,19 +2,19 @@ name: Build mkdocs pages and publish to S3 bucket
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build:
-    name: Deploy docs
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 'pypy-3.6'
+          python-version: 3.8
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
 
       - name: Build pages and publish to S3
         uses: sys3/mkdocs-s3-publish-action@main
