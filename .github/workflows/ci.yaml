@@ -1,4 +1,4 @@
-name: Build mkdocs pages and publish to S3 bucket
+name: Build and publish to S3 bucket
 
 on:
   push:
