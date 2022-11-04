@@ -11,8 +11,8 @@
 - open source, no subscription nor dependecies from 3rd party apps
 
 ## Tools chosen for creating this document:
-- [MkDocs](https://www.mkdocs.org)
-- [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/)
+- [MkDocs](https://www.mkdocs.org) - the static-site generator
+- [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/) - to make the documentation look good
 <!-- TODO add {:target="_blank"} -->
 
 <!-- ## Todo list
@@ -22,45 +22,58 @@
 - [X] test mermaid and others adds on -->
 
 ## Introduction
-MkDocs is static site generator.
+The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
 
-The content can be writen and edited in any text editor in markdown language. When changes are pushed to repository, building action is automaticly triggered and the static website generated.
 
-<!-- TODO add git hooks, autobuild etc -->
-``` mermaid
-flowchart LR
-A(content in markdown) -->  B
 
-B(MkDocs) 
 
-B --> C(static website)
+## Local installation
+Installation of mkdocs on local machine so you can edit the docs code and preview it locally without publishing.
+Not neccecery but helpful if editing the documentation often. For sporadic minor changes github can be used.
 
+### Requirements
+Python with packages manager
+```shel
+python3 --version
+python3 -m pip –version
+```
+If the pip is missing download it by running the following command:
+```shel
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 ```
 
-The proces is automated with a github.
-Every time there is a content pushed to master branch, it triggers the build flow and publish the static generated page.
-When pushinh on development branch development, i.e adding and working on text 2, there will be no triger and changes will be visible only locally without publishing. After merging, text 1 with additional text 2 will be published.
-
-``` mermaid
-gitGraph
-       commit id: "init"
-       commit id: "add text 1"
-       branch development
-       checkout development
-       commit id: "add new text 2"
-       checkout main
-       commit id: "change text 1"
-       checkout development
-       commit id: "update text 2"
-       checkout main
-       merge development id: "merge" tag: "text   2 added to text 1" type: NORMAL
-       commit id: "-"
-       commit id: " "
+Install the downloaded package by running:
+```shel
+python3 get-pip.py
+```
+To verify that you have installed pip correctly, check the pip version on your system:
+```shel
+pip3 --version
 ```
 
-the documentation can ba also preview live with ongoing changes locally with
-```bash
-mkdocs serve
+### Installing MkDocs
+```shel
+pip3 install mkdocs
+```
+check
+```shel
+pip3 list | grep mkdocs
+python3 -m mkdocs
+```shel
+
+<!-- Add to PATH
+PATH='/Users/production/Library/Python/3.8/bin'
+export PATH -->
+
+```shel
+pip3 install -r mkdocs-material
+pip3 install mkdocs-material-extensions
+```
+
+### Using MkDocs
+in terminal in project folder run:
+```shel
+python3 -m mkdocs serve
 ```
 
 ## Building from scratch
@@ -93,6 +106,41 @@ conda activate ./env
 ```
 
 More info how to getting started at [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
+
+## Publishing static webpage
+The document can be writen in markdown language and edited in any text editor. When changes are pushed to repository, building action is automaticly triggered and the static website generated and published.
+
+<!-- TODO add git hooks, autobuild etc -->
+``` mermaid
+flowchart LR
+A(content in markdown) -->  B
+
+B(MkDocs) 
+
+B --> C(static website)
+
+```
+
+The proces is automated with a github.
+Every time a content or changes are pushed to master branch, it triggers the build flow and publish the static generated page. 
+Changes on development branch, i.e adding and working on text 2, will not triger the build flow and changes will be visible only locally. After merging with master branch, text 1 with additional text 2 will be published.
+
+``` mermaid
+gitGraph
+       commit id: "init"
+       commit id: "add text 1"
+       branch development
+       checkout development
+       commit id: "add new text 2"
+       checkout main
+       commit id: "change text 1"
+       checkout development
+       commit id: "update text 2"
+       checkout main
+       merge development id: "merge" tag: "text   2 added to text 1" type: NORMAL
+       commit id: "-"
+       commit id: " "
+```
 
 
 ## Commands

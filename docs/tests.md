@@ -1,6 +1,18 @@
 # Test page
 Test page for testing, formating, tools, plugins etc.
 
+## Revision date
+
+https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
+
+<small><br><i>Updated {{ page.meta.revision_date }}</i></small>
+{% endif %}
+
+This page was last updated: *{{ git_revision_date_localized }}*
+
+Created: {{ page.meta.git_created_date_localized }}
+
+
 ## Flow charts
 Text based flow chart, more info [here](https://mermaid-js.github.io/mermaid/#/). En example below.
 

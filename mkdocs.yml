@@ -4,6 +4,7 @@ nav:
   - About: index.md
   - Doc system: mkdocs-intro.md
   - Preparing new charging system: newUnit.md
+  - Beaglebone packages: bb-pkgs.md
   - Cloning SD card: cloneSD.md
   - FlashingPLC: flashPLC.md
   - Authenticating SDK: sdk-auth.md
@@ -17,12 +18,12 @@ theme:
   logo: assets/logo.png    
   name: material
   features:
-    - navigation.sections
-    - toc.integrate
     - navigation.top
-    - header.autohide
+    - navigation.sections
     - navigation.tracking
     # - navigation.tabs
+    - toc.integrate
+    - header.autohide
     - content.code.annotate
   language: en
   palette:
@@ -44,6 +45,7 @@ theme:
   plugins:
    - search
    - git-revision-date-localized
+  #  - macros
       # enable_creation_date: true
       # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/available-variables/
   icon:
@@ -87,7 +89,7 @@ markdown_extensions:
       # emoji_index: !!python/name:materialx.emoji.twemoji
       # emoji_generator: !!python/name:materialx.emoji.to_svg
 
-extra_javascript:
+# extra_javascript:
   # - https://unpkg.com/mermaid/dist/mermaid.min.js
   # - js/timeago.min.js
   # - js/timeago_mkdocs_material.js

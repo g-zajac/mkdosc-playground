@@ -1,12 +1,12 @@
 # Charging System with Drone Port
 
-To prepare the charging system for a droneport, standard system (just a plate without box) is needed with additional interface cable, which is connects BB gpio pins with a Droneport. 
+To integrate charging system with a droneport, standard system (just a plate without box) is needed with additional interface cable, which allows bi-directional communication.
 
 Prcedure
 
-- order addtional components
+- order addtional components for building the cable.
 - cut dsub cable in half, strip wires, add heat shrink tube
-- solder wires to header according the table, [specification](assets/dp-interface-spec.pdf)
+- solder wires to header according the table, based om [DP specification](assets/dp-signals.pdf)
 - optionally, activate [SDK](sdk-auth.md) to remote access and test at CDM
 
 ## Additional components
@@ -16,15 +16,15 @@ Components required for building the cable interface (Mouser codes):
 * Header for source board (2x22, 44pins): 7-534206-2 header & wire housing 2x22p
 
 ## The interface
-<!-- Charging System is connected with a Droneport with a cable which connects BB pinheader with acording to the  -->
+Charging System is connected with a Droneport with a cable. One end has D-SUB15, other 44 header pin socket.
 
 ![DSUB15 female connector](assets/DSUB-15female.svg){ align=center }
 <!-- *D-Sub15 female connector - to the Droneport* -->
-the D-SUB 15 ==female== plug connects source board with the Droneport controller.
+the D-SUB 15 ==female== plug goes to Droneport controller.
 
 ![pin header on source board](assets/skymux-socket30.png){ align=center }
 <!-- *socket - to pinheader located next to BB on the source board* -->
-the 44pin socket is connected to pin header located next to BB on the source PCB.
+the 44pin socket goes to pin header located next to BB on the source PCB.
 
 ## Wireing table
 | Beaglebone interface  | Beaglebone gpio pin| Cable color [^1] | D-SUB pin    | D-SUB connector            |
