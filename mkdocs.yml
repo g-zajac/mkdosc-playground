@@ -10,6 +10,7 @@ nav:
   - DP interface: dp-interface.md
   - Updating Debian: debian-update.md
   - Meanwell PS: meanwellPS.md
+  - BB terminal split: tmux.md
   - Tests: tests.md
 
 theme:
