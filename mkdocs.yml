@@ -1,5 +1,7 @@
 site_name: Internal Documentation
 
+use_directory_urls: false
+
 nav:
   - About: index.md
   - Doc system: mkdocs-intro.md
@@ -96,7 +98,6 @@ markdown_extensions:
 
 extra:
   generator: false
-  use_directory_urls: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/g-zajac/mkdosc-playground.git
