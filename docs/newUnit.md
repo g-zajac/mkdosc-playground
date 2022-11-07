@@ -36,7 +36,7 @@ skymux-flash --hw-version <get the number written on the PCB i.e 1.3 at the mome
 This will flash the STM microcontrller on the source board. The board may need power cycle (down and up) to be fully functional.
 
 ## System calibration
-
+comming soon... check Asana for deadline
 
 ## System test
 
