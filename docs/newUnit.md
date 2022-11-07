@@ -16,7 +16,7 @@ Insert the SD card with image to the Beaglebone (BB), connect it with etherent w
 Power the BB up, after a minute or so all blue LEDs on BB should start 'walking' back and forth - flashing. The flashing proces takes about 15mins or so. Once the flashing is complete the leds go off. ==At the moment there is a bug and the flashing process run twice.== During the flashing a label should be automaticly printed. Once the flashing process is completed, the BB LEDs are off, disconnect from power and ethernet
 
 !!! Note
-        Remeber to remove the SD card after flashing.
+        Remeber to remove the SD card from the flashed Beaglebone after flashing.
 
 ## First power up 
 Install the BB on the source board. 
@@ -31,7 +31,7 @@ ssh -i <path to ssh keys> root@skydevice.local
 Flashed BB consists debian system with all skycharge deamons and packages pre-installed. On the source board there is STM microcontroller which need to be flashed with Skycharge firmware when it comes from PCB manufacture. 
 To do so, we can use preinstalled cli tool from BB and run:
 ```shel
-skymux-flash --hw-version <get the number written on the board i.e 1.3 at the moment, so specify 1.3.0>
+skymux-flash --hw-version <get the number written on the PCB i.e 1.3 at the moment, so specify 1.3.0>
 ```
 This will flash the STM microcontrller on the source board. The board may need power cycle (down and up) to be fully functional.
 
