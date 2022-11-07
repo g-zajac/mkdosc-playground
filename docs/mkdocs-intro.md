@@ -18,12 +18,6 @@
 - [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/) - to make the documentation look good
 <!-- TODO add {:target="_blank"} -->
 
-<!-- ## Todo list
-- [ ] add step by step instruction to set the mkdosc + material up
-- [ ] test autodeployment to s3
-- [ ] copy some skycharge docs for reference
-- [X] test mermaid and others adds on -->
-
 ## Introduction
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
 
