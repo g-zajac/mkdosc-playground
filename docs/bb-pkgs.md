@@ -35,7 +35,8 @@ apt install skysensed=1.2.1
 ```
 
 
-## Script for allowing flashed bbone to execute simple script and selfinstall. /usr/local/bin/selfinstall.sh launched in rc.local:
+## Selfinstall script
+Script for allowing flashed bbone to execute simple script and selfinstall. /usr/local/bin/selfinstall.sh launched in rc.local:
 
 ```bash
 #!/bin/bash
