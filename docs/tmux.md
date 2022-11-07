@@ -28,6 +28,10 @@ tmux attach -t 0
 
 ### Pane Handling
 By default, the prefix is CTRL+B followed by a command.
+To check the current prefix shortcut run:
+```shell
+tmux show-options -g | grep prefix
+```
 
 - Split panes vertically	<kbd>Ctrl</kbd> + <kbd>B</kbd> + <kbd>%</kbd>
 - Split panes horizontally    <kbd>Ctrl</kbd> + <kbd>B</kbd> + <kbd>"</kbd>
