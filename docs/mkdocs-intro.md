@@ -36,46 +36,46 @@ Not neccecery but helpful if editing the documentation often. For sporadic minor
 
 ### Requirements
 Python with packages manager
-```shel
+```bash
 python3 --version
 python3 -m pip –version
 ```
 If the pip is missing download it by running the following command:
-```shel
+```bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 ```
 
 Install the downloaded package by running:
-```shel
+```bash
 python3 get-pip.py
 ```
 To verify that you have installed pip correctly, check the pip version on your system:
-```shel
+```bash
 pip3 --version
 ```
 
 ### Installing MkDocs
-```shel
+```bash
 pip3 install mkdocs
 ```
 check
-```shel
+```bash
 pip3 list | grep mkdocs
 python3 -m mkdocs
-```shel
+```
 
 <!-- Add to PATH
 PATH='/Users/production/Library/Python/3.8/bin'
 export PATH -->
 
-```shel
+```bash
 pip3 install -r mkdocs-material
 pip3 install mkdocs-material-extensions
 ```
 
 ### Using MkDocs
 in terminal in project folder run:
-```shel
+```bash
 python3 -m mkdocs serve
 ```
 
@@ -101,7 +101,7 @@ pip install -r requirements.txt
 ```
 After the installation you can create the site:
 ```bash
-mkdocs new .
+mkdocs new
 ```
 the nactivate the enviroment:
 ```bash
@@ -117,11 +117,8 @@ The document can be writen in markdown language and edited in any text editor. W
 ``` mermaid
 flowchart LR
 A(content in markdown) -->  B
-
 B(MkDocs) 
-
 B --> C(static website)
-
 ```
 
 The proces is automated with a github.
