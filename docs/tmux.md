@@ -1,8 +1,8 @@
 # Splitting screen in terminal
 The purpose of splitting terminal screen is to see on one terminal window two panes with skycharge-cli monitor and skycharge-cli show-dev-params at the same time for demo.
+![tmux-screen-split](assets/tmux.png)
 
-
-## Installing tmux
+## Installing tmux (if not installed)
 ```shell
 sudo apt-get install tmux
 ```
