@@ -8,6 +8,7 @@ The aim is to get all the knowledge together in one place.
 The Skycharge Documentation Center is a perfect place to explore and delve deeper into the potential of our products on the autonomus charging. Herein lies a set of comprehensive documents that provides the fundamentals and the specifications of our devices. Information curated here by our experts will help you initiate and build your next charging project.
 
  -->
-
-
-
+## Project status
+- [x] move static pages to S3 and add autentication
+- [ ] test aws setup, CloudFront propagate the website very slow
+- [ ] add WYSIWYG for markdown editing
