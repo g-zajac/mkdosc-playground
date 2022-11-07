@@ -1,18 +1,29 @@
 # Flashing PLC
 
-Connect to USB the ST-link and wire it to a sink PLC with 4 wires:
+## Connecting programmer
+
+Connect the ST-link USB dongle (programmer) to a USB port and clip the PLC board.
+
+!!! failure
+
+        The clip pin order works ONLY with the sink PLC ver 1.0.3 older version have diferent order and need to be wire manually without the clip.
+
+4 wires need to be connected from programmer to PLC:
 - 3V3
 - GND
 - CLK
 - DIO
+  
+![PLC programmer](assets/flashing-plc.jpg)
 
-Run: 
+## Flashing the firmware 
 
+To flash the connected sink PLC run from /devel/skycharge/hw2/skysink/firmware:
 ```bash
-cd /devel/skycharge/hw2/skysink/firmware
 make flash-hw-version HW_VERSION=1.2.0
-st-info —probe
-st-flash
-make flash
 ```
 
+## Other usefull commands
+```bash
+st-info —probe
+```
