@@ -28,8 +28,6 @@
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
 
 
-
-
 ## Local installation
 Installation of mkdocs on local machine so you can edit the docs code and preview it locally without publishing.
 Not neccecery but helpful if editing the documentation often. For sporadic minor changes github can be used.
@@ -142,6 +140,37 @@ gitGraph
        commit id: " "
 ```
 
+## Files structure
+
+The internal docuemtation folder is stored in github and can be cloned and edited by multiple users.
+Root folder consist configuration, docs folder consist all documentaion pages with assets subfolder for media. aws folder consist files for hosting the documentation on AWS.
+
+### The project files structure:
+
+```
+internaldoc
+│   mkdocs.yml       *cnfiguration file*
+│   
+│ 
+└───aws 
+│   │   s3-cf.yaml   *CloudFormation script*
+│
+└───docs             *content pages in md format*
+│   │   s3-cf.yaml     
+│   │  
+│   └───assets       *media files, images etc*
+│       │   logo.jpg
+│       │   dp-signals.jpg
+│       │   ...
+```
+
+All AWS resources used for internal documentation are tagged.
+```json
+Project: internal doc
+```
+The tag can be used to list, filter, find cost asosiated with the internal documentation project.
+CodePipeline, S3 bucket are created with Cloudformation script.
+Authentication via CloudFront with Lambda function are added manually.
 
 ## Commands
 
