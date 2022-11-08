@@ -7,7 +7,7 @@ The purpose of splitting terminal screen is to see on one terminal window two pa
 sudo apt-get install tmux
 ```
 
-## Usefull Commands list
+## Using
 Creat a new session (window):
 ```shell
 tmux new -s [session_name]
@@ -51,7 +51,8 @@ tmux new -s Skycharge
 split it horizontaly: <kbd>Ctrl</kbd> + <kbd>B</kbd> + <kbd>%</kbd>\
 move between panes: <kbd>Ctrl</kbd> + <kbd>B</kbd> + <kbd>arrow key</kbd>
 
-### Script for split and call Skycharge cli commands:
+### Script automation
+The screen split and running skkycharge-cli commands can be automated with scrip below:
 
 ```bash
 #!/bin/sh
