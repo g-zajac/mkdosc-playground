@@ -21,6 +21,12 @@
 ## Introduction
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
 
+``` mermaid
+flowchart LR
+A(content in markdown) -->  B
+B(MkDocs) 
+B --> C(static website)
+```
 
 ## Local installation
 Installation of mkdocs on local machine so you can edit the docs code and preview it locally without publishing.
@@ -70,9 +76,15 @@ in terminal in project folder run:
 ```bash
 python3 -m mkdocs serve
 ```
+### Other commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
 
 ## Building from scratch
-
+The internal documantaion project is already created. In case you need to bulid it from scratch:
 Create a new repository at github where we deploy the documentation, recommended setup: 
 - gitignore for python
 - MIT licence
@@ -103,17 +115,18 @@ conda activate ./env
 More info how to getting started at [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
 ## Publishing static webpage
-The document can be writen in markdown language and edited in any text editor. When changes are pushed to repository, building action is automaticly triggered and the static website generated and published.
+When content changes are pushed to github repository, building action is automaticly triggered.
+The build oprocess is done with AWS CodePipeline service, which is connected to github with hooks.
 
-<!-- TODO add git hooks, autobuild etc -->
 ``` mermaid
 flowchart LR
-A(content in markdown) -->  B
-B(MkDocs) 
-B --> C(static website)
+A(content in markdown) -- push -->  B
+B(github) -- hook --> C
+subgraph AWS CodePipeline
+C(Source from github) --> D(Build mkdocs) --> E(Release to S3)
+end
 ```
 
-The proces is automated with a github.
 Every time a content or changes are pushed to master branch, it triggers the build flow and publish the static generated page. 
 Changes on development branch, i.e adding and working on text 2, will not triger the build flow and changes will be visible only locally. After merging with master branch, text 1 with additional text 2 will be published.
 
@@ -133,11 +146,29 @@ gitGraph
        commit id: "-"
        commit id: " "
 ```
+## Hosting documentation website
+The static website is hosted on AWS. The documentation web files are stored in S3 bucket - internaldoc.skycharge.de. The bucket is not public.
+All AWS resources used for internal documentation are tagged with project name:
+```json
+ { "Project": "internaldoc" }
+```
+The tag can be used to list, filter and find cost asosiated with the internal documentation project.
+CodePipeline, S3 bucket are created with Cloudformation script. Authentication via CloudFront with Lambda edge function are created manually.
+
+![AWS S3 authentication](assets/aws-pipeline.png)
+
+### Authentication, changing password
+To reset, change password, log in into [AWS console](https://aws.amazon.com), go to service Lambda, find and open the lambda-internaldoc-auth function.
+In the code tab in line 8 there is the line with username and password.
+```js
+const authString = 'Basic ' + new Buffer('admin' + ':' + 'password').toString('base64');
+```
+Change, adjust if nececcery. To apply changes hit deploy.
 
 ## Files structure
 
-The internal docuemtation folder is stored in github and can be cloned and edited by multiple users.
-Root folder consist configuration, docs folder consist all documentaion pages with assets subfolder for media. aws folder consist files for hosting the documentation on AWS.
+The internal documentaion folder is stored in github and can be cloned and edited by multiple users.
+Root folder consist configuration, docs folder consist all content documentaion pages with assets subfolder for media. aws folder consist script files for creating the pipeline.
 
 ### The project files structure:
 
@@ -150,7 +181,9 @@ internaldoc
 │   │   s3-cf.yaml   *CloudFormation script*
 │
 └───docs             *content pages in md format*
-│   │   s3-cf.yaml     
+│   │   index.html
+│   │   page1
+│   │   page2...
 │   │  
 │   └───assets       *media files, images etc*
 │       │   logo.jpg
@@ -158,17 +191,4 @@ internaldoc
 │       │   ...
 ```
 
-All AWS resources used for internal documentation are tagged.
-```json
-Project: internal doc
-```
-The tag can be used to list, filter, find cost asosiated with the internal documentation project.
-CodePipeline, S3 bucket are created with Cloudformation script.
-Authentication via CloudFront with Lambda function are added manually.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
