@@ -14,7 +14,7 @@ nav:
   - Updating Debian: debian-update.md
   - Meanwell PS: meanwellPS.md
   - BB terminal split: tmux.md
-  - Tests: tests.md
+  - Test page: tests.md
 
 theme:
   logo: assets/logo.png    
@@ -46,10 +46,9 @@ theme:
   # logo: PyTorch_logo_icon.svg
   plugins:
    - search
-   - git-revision-date-localized
-  #  - macros
-      # enable_creation_date: true
-      # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/available-variables/
+   - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_date
   icon:
   repo: fontawesome/brands/git-alt 
   admonition:
