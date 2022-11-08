@@ -1,6 +1,6 @@
 # Test page
 Test page for testing, formating, tools, plugins etc.\
-Ver 1.0.4
+Ver 1.0.5
 
 ## Revision date
 
@@ -12,6 +12,7 @@ https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
 This page was last updated: *{{ git_revision_date_localized }}*
 
 Created: {{ page.meta.git_created_date_localized }}
+This page was last updated: *{{ git_revision_date_localized }}*
 
 
 ## Flow charts
