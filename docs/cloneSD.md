@@ -2,8 +2,7 @@
 
 Instruction to clone a SD card, used for backup of the Skycharge installation image.
 The process run on Mac in terminal.
-Inser the SD card, make sure it is the same siye or bigger then the source SD card.
-Attach and identify the source disk
+To make an image of existing card, insert the card and run:
 ```bash
 diskutil list
 ```
@@ -45,7 +44,8 @@ expected oustcome:
 1.61GiB 0:12:19 [2.82MiB/s] [===>                 ] 10% ETA 1:50:25
 ```
 
-Remove the card after finished process. Attach and identify the destination disk
+Remove the card after finished process. Insert the empty SD card, make sure it is the same size as the image or bigger.
+Attach and identify the source disk
 ```bash
 diskutil list
 ```
