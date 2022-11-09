@@ -35,7 +35,7 @@ skymux-flash --hw-version <get the number written on the PCB i.e 1.3 at the mome
 This will flash the STM microcontrller on the source board. The board may need power cycle (down and up) to be fully functional.
 
 ## System calibration
-The system calibration has two steps:
+The system calibration scripts are located @ /devel/skycharge/skyautotests and have two steps:
 
 1) source PCB board calibration
 ```shell
