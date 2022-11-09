@@ -1,6 +1,6 @@
 # Test page
 Test page for testing, formating, tools, plugins etc.\
-Ver 1.0.6
+Ver 1.0.7
 
 ## Revision date
 
