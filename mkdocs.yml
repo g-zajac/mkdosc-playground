@@ -47,9 +47,7 @@ theme:
   # logo: PyTorch_logo_icon.svg
   plugins:
    - search
-   - git-revision-date-localized:
-      enable_creation_date: true
-      # type: iso_date
+   - git-revision-date-localized
    - git-revision-date
    - macros
   icon:
