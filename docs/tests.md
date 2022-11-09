@@ -14,6 +14,16 @@ This page was last updated: *{{ git_revision_date_localized }}*
 Created: {{ page.meta.git_created_date_localized }}
 This page was last updated: *{{ git_revision_date_localized }}*
 
+## Math formulas
+
+$$
+@math $ \frac{\sqrt{2x}}{y} $
+$$
+
+$$
+\operatorname{ker} f=\{g\in G:f(g)=e_{H}\}{\mbox{.}}
+$$
+
 
 ## Flow charts
 Text based flow chart, more info [here](https://mermaid-js.github.io/mermaid/#/). En example below.
