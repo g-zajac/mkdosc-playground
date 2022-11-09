@@ -6,6 +6,7 @@ nav:
   - About: index.md
   - Doc system: mkdocs-intro.md
   - Preparing new charging system: newUnit.md
+  - QR code labels: labels.md
   - Beaglebone packages: bb-pkgs.md
   - Cloning SD card: cloneSD.md
   - FlashingPLC: flashPLC.md
@@ -48,7 +49,9 @@ theme:
    - search
    - git-revision-date-localized:
       enable_creation_date: true
-      type: iso_date
+      # type: iso_date
+   - git-revision-date
+   - macros
   icon:
   repo: fontawesome/brands/git-alt 
   admonition:

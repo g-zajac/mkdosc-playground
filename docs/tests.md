@@ -1,6 +1,6 @@
 # Test page
 Test page for testing, formating, tools, plugins etc.\
-Ver 1.0.5
+Ver 1.0.6
 
 ## Revision date
 
@@ -12,7 +12,8 @@ https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
 This page was last updated: *{{ git_revision_date_localized }}*
 
 Created: {{ page.meta.git_created_date_localized }}
-This page was last updated: *{{ git_revision_date_localized }}*
+
+Page last revised on: {{ git_revision_date }}
 
 ## Math formulas
 
@@ -100,6 +101,3 @@ theme:
 
 1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
     text__, images, ... basically anything that can be written in Markdown.
-
-## Last update info
-This page was last updated: *{{ git-revision-date-localized }}*
