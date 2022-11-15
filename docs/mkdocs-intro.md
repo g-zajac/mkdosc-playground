@@ -192,8 +192,11 @@ internaldoc
 │       │   dp-signals.jpg
 │       │   ...
 │   └───sources       *sources for diagrams etc*
-│       │   aws-s3-auth.drawio  *diagrams.net source file
+│       │   aws-s3-auth.drawio  *diagrams.net source file*
 │       │   ...
+│   └───img       *folder just for favicon*
+│       │   favicon.png  *default favicon*
+|       |   ... various platforms and sizes favicons
 ```
 
 

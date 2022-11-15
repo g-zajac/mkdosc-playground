@@ -1,7 +1,6 @@
 site_name: Internal Documentation
 
 use_directory_urls: false
-favicon: assets/favicon.png
 
 nav:
   - About: index.md
