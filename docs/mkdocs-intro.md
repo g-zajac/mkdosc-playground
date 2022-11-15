@@ -16,7 +16,7 @@
 <!-- TODO open link in a new page add {:target="_blank"} -->
 - [MkDocs](https://www.mkdocs.org) - the static-site generator
 - [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/) - to make the documentation look good
-- [diagrams.net](https://www.diagrams.net) - a free online diagram editor, export to svg
+- [diagrams.net](https://www.diagrams.net) - a free online diagram editor, export to svg. The diagram files are placed in /docs/sources
 
 ## Introduction
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
