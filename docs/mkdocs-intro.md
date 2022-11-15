@@ -163,7 +163,9 @@ In the code tab in line 8 there is the line with username and password.
 ```js
 const authString = 'Basic ' + new Buffer('admin' + ':' + 'password').toString('base64');
 ```
-Change, adjust if nececcery. To apply changes hit deploy.
+Change, adjust if nececcery. To apply changes hit deploy, increase version and update the new version in ClouFront. (to be explained in detail)
+<!-- TODO explain in detail the pass change process, version update in CloudFront -->
+
 
 ## Files structure
 
