@@ -18,11 +18,11 @@ Components required for building the cable interface (Mouser codes):
 ## The interface
 Charging System is connected with a Droneport with a cable. One end has D-SUB15, other 44 header pin socket.
 
-![DSUB15 female connector](assets/DSUB-15female.svg){ align=center }
+![DSUB15 female connector](assets/DSUB-15female.svg)
 <!-- *D-Sub15 female connector - to the Droneport* -->
 the D-SUB 15 ==female== plug goes to Droneport controller.
 
-![pin header on source board](assets/skymux-socket30.png){ align=center }
+![pin header on source board](assets/skymux-socket30.png)
 <!-- *socket - to pinheader located next to BB on the source board* -->
 the 44pin socket goes to pin header located next to BB on the source PCB.
 
