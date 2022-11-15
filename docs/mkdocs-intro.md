@@ -10,13 +10,13 @@
 - version control for colaboration and tracking mistakes and bugs
 - staging with previewing before publishing
 - host enywhere, i.e github, s3 etc
-- open source, no subscription nor dependecies from 3rd party apps
+- open source, no subscription nor dependecies from 3rd party apps including graphs, charts and diagrams
 
 ## Tools chosen for creating this document:
-
+<!-- TODO open link in a new page add {:target="_blank"} -->
 - [MkDocs](https://www.mkdocs.org) - the static-site generator
 - [MkDOcs Material](https://squidfunk.github.io/mkdocs-material/) - to make the documentation look good
-<!-- TODO add {:target="_blank"} -->
+- [diagrams.net](https://www.diagrams.net) - a free online diagram editor, export to svg
 
 ## Introduction
 The documentation is written in markdown. Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know. The markdown content is processsed by MkDocs to generate a static site.
@@ -155,7 +155,7 @@ All AWS resources used for internal documentation are tagged with project name:
 The tag can be used to list, filter and find cost asosiated with the internal documentation project.
 CodePipeline, S3 bucket are created with Cloudformation script. Authentication via CloudFront with Lambda edge function are created manually.
 
-![AWS S3 authentication](assets/aws-pipeline.png)
+![AWS S3 authentication](assets/aws-s3-auth.svg)
 
 ### Authentication, changing password
 To reset, change password, log in into [AWS console](https://aws.amazon.com), go to service Lambda, find and open the lambda-internaldoc-auth function.
