@@ -172,7 +172,7 @@ Change, adjust if nececcery. To apply changes hit deploy, increase version and u
 The internal documentaion folder is stored in github and can be cloned and edited by multiple users.
 Root folder consist configuration, docs folder consist all content documentaion pages with assets subfolder for media. aws folder consist script files for creating the pipeline.
 
-### The project files structure:
+### Files tree
 
 ```
 internaldoc
