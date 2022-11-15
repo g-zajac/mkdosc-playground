@@ -189,6 +189,9 @@ internaldoc
 │       │   logo.jpg
 │       │   dp-signals.jpg
 │       │   ...
+│   └───sources       *sources for diagrams etc*
+│       │   aws-s3-auth.drawio  *diagrams.net source file
+│       │   ...
 ```
 
 
